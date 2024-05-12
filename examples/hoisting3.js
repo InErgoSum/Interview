@@ -2,16 +2,16 @@ foo();
 
 
 function foo() {
-    bar();
-    loo();
+  bar();
+  loo();
 
-    function bar() {
-        console.log('bar');
-    }
+  function bar() {
+      console.log('bar');
+  }
 
-    const loo = () => {
-        console.log('loo');
-    }
+  const loo = () => {
+      console.log('loo');
+  }
 
-    console.log('foo');
+  console.log('foo');
 }

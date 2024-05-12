@@ -2,9 +2,9 @@ foo();
 bar();
 
 function foo() {
-    console.log('foo');
+  console.log('foo');
 }
 
 const bar = () => {
-    console.log('bar');
+  console.log('bar');
 }
