@@ -4,14 +4,14 @@ type Servers = {
 }
 
 type UsersAmountRecord = {
-  id: string;
+  serverId: string;
   users: number | null;
 }
 
-// Закончи строку так, чтобы AggregatedServer имел id, name, users
-type AggregatedServer;
+// Закончи строку так, чтобы AggregatedServer имел id: number, name, users
+type AggregatedServer = ;
 
-const brands: Servers[] = [
+const servers: Servers[] = [
   {name: 'London-1', id: 1}, 
   {name: 'Moscow', id: 2}, 
   {name: 'Ankara-2', id: 3}, 
@@ -19,21 +19,25 @@ const brands: Servers[] = [
 ];
 
 const usersAmountRecords: UsersAmountRecord[] = [
-  {id: '3', users: 100}, 
-  {id: '1', users: 200}, 
-  {id: '2', users: 300},
+  {serverId: '3', users: 100}, 
+  {serverId: '1', users: 200}, 
+  {serverId: '2', users: 300},
 ];
 
 
-function aggregateServers(brands: Servers[], usersAmountRecords: UsersAmountRecord[]): AggregatedServer[] {
+function aggregateServers(servers: Servers[], usersAmountRecords: UsersAmountRecord[]): AggregatedServer[] {
+  // Закончи функцию так, чтобы она вернула корректные агрегированные данные, и тест не упал
 }
 
 
-it('should return correct result', () => {
-  expect(aggregateServers(brands, usersAmountRecords)).toEqual([
-    { name: 'London-1', id: 1, users: 200 },
-    { name: 'Moscow', id: 2, users: 300 },
-    { name: 'Ankara-2', id: 3, users: 100 },
-    { name: 'Berlin-3', id: 4, users: null }
-  ]);
+describe('aggregateServers', () => {
+  it('should return correct result', () => {
+    expect(aggregateServers(servers, usersAmountRecords)).toEqual([
+      { name: 'London-1', id: 1, users: 200 },
+      { name: 'Moscow', id: 2, users: 300 },
+      { name: 'Ankara-2', id: 3, users: 100 },
+      { name: 'Berlin-3', id: 4, users: null }
+    ]);
+  })
 })
+
