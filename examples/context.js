@@ -7,14 +7,14 @@ let john = {
         name: 'Bob',
         surname: 'Green',
         greet: () => {
-            console.log('Hello, my name is', this.name);
+          console.log('Hello, my name is', this.name);
         },
         saySurname: function() {
-            const sayFunc = () => {
-                console.log('My surname is', this.surname);
-            }
+          const sayFunc = () => {
+            console.log('My surname is', this.surname);
+          }
 
-            sayFunc();
+          sayFunc();
         }
     }
 };
